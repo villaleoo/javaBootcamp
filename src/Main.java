@@ -1,79 +1,49 @@
 public class Main {
     public static void main(String[] args) {
-        //int resultado= 0;
-        //resultado= suma(4,2, 3);
-        //System.out.println(resultado);
-        //Coche miCoche = new Coche();                      ejercicio 1
-        //miCoche.agregarPuertas();
-        //miCoche.agregarPuertas();
-        //System.out.println(miCoche.numeroDePuertas);
-        int numeroIf= 0;
-        int numeroWhile = 0;
-        int numeroDoWhile= 0;
-        int numeroFor = 0;
-        String estacion= "invierno";
+        Persona persona1 = new Persona();
 
-    funcionIf(numeroIf);
-    funcionWhile(numeroWhile);
-    funcionDoWhile(numeroDoWhile);
-    funcionFor(numeroFor);
-    functionSwitch(estacion);
+        persona1.setEdad(24);
+        int verEdadPersona1= persona1.getEdad();
 
-    }
+        persona1.setNombre("Leopoldo");
+        String verNombrePersona1= persona1.getNombre();
 
-    //public static int suma (int a , int b , int c){    ejercicio 1
-      //  return a+b+c;
-   // }
+        persona1.setTelefono(1122501309);
+        int verTelefonoPersona1= persona1.getTelefono();
 
-    public static void funcionIf(int numeroIf){
-        if(numeroIf>0){
-            System.out.println("el numero es positivo");
-        }else if(numeroIf<0){
-            System.out.println("el numero es negativo");
-        }else {
-            System.out.println("el numero es 0");
-        }
-    }
-    public static void funcionWhile(int numeroWhile){
+        System.out.println(verEdadPersona1);
+        System.out.println(verNombrePersona1);
+        System.out.println(verTelefonoPersona1);
 
-        while (numeroWhile<3) {
-            numeroWhile++;
-            System.out.println(numeroWhile);
-        }
 
-    }
-    public  static void funcionDoWhile(int numeroDoWhile){
-        do{
-            System.out.println("primera y unica ejecucion");
-        }while(numeroDoWhile<0);
-    }
-    public static void funcionFor(int numeroFor){
-        for (int i = 0;numeroFor<= 3 ;numeroFor++ ){
-            System.out.println(numeroFor);
-        }
-    }
-    public static void functionSwitch(String estacion){
-        switch (estacion){
-            case "invierno":
-                System.out.println("la estacion es invierno");
-                break;
-            case "otonio":
-                System.out.println("la estacion es otonio");
-                break;
-            case "primavera":
-                System.out.println("la estacion es primavera");
-                break;
-            default:
-                System.out.println("la estacion es verano");
-        }
     }
 }
-class Coche{
-    public int numeroDePuertas= 0;                           //ejercicio 1
+class Persona {
+    private int edad;
+    private String nombre;
+    private int telefono;
 
-    public void agregarPuertas(){
-        this.numeroDePuertas++;
+    public void setEdad (int edad){
+        this.edad= edad;
+    }
+    public int getEdad(){
+        return this.edad;
+    }
+
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+
+    }
+
+    public String getNombre (){
+        return this.nombre;
+    }
+    public void setTelefono (int telefono){
+        this.telefono= telefono;
+    }
+
+    public int getTelefono(){
+        return this.telefono;
     }
 }
-
 
